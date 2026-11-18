@@ -1,0 +1,40 @@
+
+int main(void)
+{
+	int N, m, k, l, u, o;
+	int ch, i, j = 0;
+	scanf("%d%d", &N, &m);
+	
+	int a[8][8];
+	
+	for(i = 0; i < N; i++)
+	{
+		for (j = 0; j < N; j++)
+		{
+			scanf("%d", &a[i][j]);
+		}
+	}
+	
+	for (u = 0; u < N; u++)
+	{
+		for (o = 0; o < N; o++)
+		{
+			if (u <= o)
+			{
+				a[u][o] *= m; 
+			}
+		}
+	}
+	
+	for (k = 0; k < N; k++)
+	{
+		for (l = 0; l < N; l++)
+		{
+			printf("%d ", a[k][l]);
+		}
+		
+		putchar('\n');
+	}
+	
+	return 0;
+}
